@@ -182,6 +182,60 @@ main {
     font-size: var(--fs-reg);
 }
 
+/* Styling for mobile devices, max-width 319px */
+@media screen and (max-width: 19.9375em){
+    html,
+    body {
+        --fs-reg: .8375rem;
+        --fs-big: 1rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1.25rem;
+        padding: 5rem 1rem;   
+    }
+    .info {
+        padding: 1rem;
+        word-spacing: none;  
+    }
+    .header .photo {
+        margin: 0 .75rem 1rem 0;
+    }
+    .photo img {
+        width: 1.5rem;
+    }
+    .intro {
+        margin-bottom: 1rem;   
+        line-height: 1.2; 
+    }
+    .review {
+        line-height: 1.2;
+    }
+    #daniel {
+        background-position: 85% top;
+        background-size: 5.75rem;
+    }
+    #jonathan .details .intro,
+    #jeanette .details .intro {
+    font-size: var(--fs-big);
+    }
+    #jeanette .details .review {
+    font-size: var(--fs-reg);
+    }
+    #kira .details .intro {
+    font-size: var(--fs-big);   
+    }
+    #kira .details .review  {
+    font-size: var(--fs-reg);
+    }
+    .attribution {
+        bottom: .5rem;
+        font-size: .725rem;
+        margin: 0 1rem 0 1rem;
+    }
+}
+
 /* Styling for mobile devices, min width 320px and max width 630px */
 @media screen and (min-width: 20em) and (max-width: 39.375em) {
     html,
