@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* Setting Variables */
+:root {
+    --barlow: 'Barlow Semi Condensed', sans-serif;
+    --fw-med: 500;
+    --fw-sbold: 600;
+    --fs-reg: .9375rem;
+    --fs-big: 1.425rem;
+
+    --mod-violet: hsl(263, 55%, 52%);
+    --vd-grayish-blue: hsl(217, 19%, 35%);
+    --vd-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --lt-gray: hsl(0, 0%, 81%);
+    --lt-grayish-blue: hsl(210, 46%, 95%);
+    --bs-grayish-blue: hsla(217, 19%, 35%, .2);
+
+    --fifty: 50%;
+    --seventy: 70%;
+
+    --bradius:.625rem;
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+html,
+body {
+    font-family: var(--barlow);
+    font-size: var(--fs-reg);
+    font-weight: var(--fw-med);
+    box-sizing: border-box;
+
+}
+body {
+    background: var(--lt-grayish-blue);
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    padding: 2rem 2.6rem 2rem 2.5rem;
+    word-spacing: .125rem;
+    
+}
+.info .header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .photo {
+    margin: 0 1.5rem 1.5rem 0;
+    display: block;
+    border-radius: var(--fifty);
+    width: 2.1875rem;
+}
+.photo img {
+    display: block;
+    border-radius: 50%;
+    width: 2.5rem;
+}
+.verified {
+    opacity: 50%;
+}
+
+.intro {
+    font-size: var(--fs-big);
+    font-weight: var(--fw-sbold); 
+    margin-bottom: 1.5rem;   
+    line-height: 1.3; 
+    text-align: left; 
+}
+.review {
+    opacity: 70%;
+    line-height: 1.5;
+    text-align: left; 
+}
+.container {
+    max-width: 90rem;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira"
+        ;
+    grid-gap: 1.75rem;  
+    padding: 0 1rem;
+    
+}
+
+#daniel {
+    color: var(--white);
+    background:var(--mod-violet);
+    grid-area: daniel;
+    border-radius: var(--bradius);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 83% top;
+    background-size: 8.4rem;
+    max-height: 50vh;
+    min-width: 70%;   
+}
+
+#daniel .header .photo img {
+    border: 2px solid hsla(256, 100%, 100%, .5);
+}
+
+#jonathan {
+    color: var(--white);
+    background:var(--vd-grayish-blue);
+    grid-area: jonathan;
+    border-radius: var(--bradius);
+    max-height: 50vh;
+    min-width: 15%;
+}
+
+#jeanette {
+    color:var(--vd-blackish-blue);
+    background:var(--white);
+    grid-area: jeanette;
+    border-radius: var(--bradius);
+    max-height: 50vh;
+    min-width: 15%;
+    box-shadow:  .625rem .9375rem 3rem var(--bs-grayish-blue); 
+}
+
+#patrick {
+    color: var(--white);
+    background:var(--vd-blackish-blue);
+    grid-area: patrick;
+    border-radius: var(--bradius);
+    max-height: 50vh;
+    min-width: 70%;
+}
+#patrick .header .photo img {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+#kira {
+    color: var(--vd-blackish-blue);
+    background:var(--white);
+    grid-area: kira;
+    border-radius: var(--bradius);
+    max-height: 100vh;
+    min-width: 15%;
+    box-shadow:  .625rem .9375rem 3rem var(--bs-grayish-blue);   
+}
+#jonathan .details .intro,
+#jeanette .details .intro {
+    margin-right: 2.5rem;
+    font-size: 1.5rem;
+}
+#jeanette .details .review {
+    font-size: 1rem;
+}
+#kira .details .intro {
+    font-size: 1.5rem;   
+}
+#kira .details .review  {
+    font-size: 1rem;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 1rem;
+    text-align: center;
+    font-size: var(--fs-reg);
+}
+
+/* Styling for mobile devices, min width 320px and max width 630px */
+@media screen and (min-width: 20em) and (max-width: 39.375em) {
+    html,
+    body {
+    --fs-reg: .9375rem;
+    --fs-big: 1.4rem;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1.25rem;
+        padding: 4rem 1rem;   
+    }
+    .info {
+        padding: 1.5rem;
+        word-spacing: none;  
+    }
+    .header .photo {
+        margin: 0 .75rem .75rem 0;
+    }
+    .photo img {
+        width: 2rem;
+    }
+    .intro {
+        margin-bottom: 1rem;   
+        line-height: 1.2; 
+    }
+    .review {
+        line-height: 1.3;
+    }
+    #daniel {
+        background-position: 93% top;
+        background-size: 6.2rem;
+    }
+    #jonathan .details .intro,
+    #jeanette .details .intro {
+    margin-right: 2rem;
+    font-size: var(--fs-big);
+    }
+    #jeanette .details .review {
+    font-size: var(--fs-reg);
+    }
+    #kira .details .intro {
+    font-size: var(--fs-big);   
+    }
+    #kira .details .review  {
+    font-size: var(--fs-reg);
+    }
+    .attribution {
+        bottom: .5rem;
+        font-size: .725rem;
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+/* Styling for mobile devices, min width 621px and max width 1069px */
+@media screen and (min-width: 38.81em) and (max-width: 66.81em) {
+    html,
+    body {
+    --fs-reg: .8125rem;
+    --fs-big: 1.3rem;
+    }
+    .container {
+        grid-template-areas:
+            "daniel jonathan"
+            "kira kira"
+            "jeanette patrick"
+            ;
+        grid-gap: 1.5rem;  
+        padding: 4rem 1rem;   
+    }
+    .info {
+        padding: 1.75rem; 
+    }
+    .header .photo {
+        margin: 0 1rem 1rem 0;
+    }
+    #jonathan .header .photo,
+    #jeanette .header .photo {
+        margin-bottom: 3rem ;
+    }
+    .photo img {
+        width: 2rem;
+    }
+    .intro {
+        margin-bottom: 1.25rem;   
+        line-height: 1.3; 
+    }
+    .review {
+        line-height: 1.4;
+    }
+    #daniel {
+        background-position: 87% top;
+        background-size: 7rem;
+    }
+    #jonathan .details .intro,
+    #jeanette .details .intro {
+    margin: 0 1rem 2.5rem 0;
+    font-size: var(--fs-big);
+    }
+    #jeanette .details .review {
+    font-size: var(--fs-reg);
+    }
+    #kira .details .intro {
+    font-size: var(--fs-big);   
+    }
+    #kira .details .review  {
+    font-size: var(--fs-reg);
+    }
+    .attribution {
+        bottom: .75rem;
+        font-size: .825rem;
+        margin: 0 1rem 0 1rem;
+    }
+}
