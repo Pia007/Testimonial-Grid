@@ -99,7 +99,7 @@ main {
         "jeanette patrick patrick kira"
         ;
     grid-gap: 1.75rem;  
-    padding: 0 1rem;
+    padding: 4rem 5rem;
     
 }
 
@@ -253,7 +253,7 @@ main {
             "jeanette patrick"
             ;
         grid-gap: 1.5rem;  
-        padding: 4rem 1rem;   
+        padding: 4rem 4rem;   
     }
     .info {
         padding: 1.75rem; 
