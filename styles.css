@@ -248,6 +248,7 @@ main {
         height: auto;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         grid-gap: 1.25rem;
         padding: 4rem 1rem;   
     }
